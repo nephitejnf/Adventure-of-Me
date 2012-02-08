@@ -14,7 +14,7 @@ public class frontDoor extends places{
 	
 	public void desc(){
 		
-		System.out.println("\n\nYou are practically kissing the door now, not really. Ahead is the " + start.fg(Color.GREEN) + "kitchen" + start.fg(Color.DEFAULT) + " and to the right is the " + start.fg(Color.GREEN) + "livingroom" + start.fg(Color.DEFAULT) + ".");
+		System.out.println("\n\nYou are practically kissing the door now, not really. Ahead is the " + start.fg(Color.GREEN) + "kitchen" + start.fg(Color.DEFAULT) + " and to the right is the " + start.fg(Color.GREEN) + "livingroom" + start.fg(Color.DEFAULT) + ". You can always goto the " + start.fg(Color.GREEN) + "frontyard" + start.fg(Color.DEFAULT) + ".");
 		process();
 		
 	}
@@ -42,6 +42,13 @@ public class frontDoor extends places{
 				}
 				lroom.inv = inv;
 				lroom.desc();
+			}else if(item.equalsIgnoreCase("frontyard")){
+				frontyard fy = new frontyard();
+				if(flash_drive == true){
+					fy.flash_drive = true;
+				}
+				fy.inv = inv;
+				fy.desc();
 			}else{
 				desc();
 			}

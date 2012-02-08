@@ -77,6 +77,9 @@ public class bedroom extends places{
 				desc();
 			}
 			
+		}else if(com.equalsIgnoreCase("debugadd")){
+			inv.addItem(item);
+			desc();
 		}else{
 			System.out.printf("INVALID COMMAND %s", com);
 			desc();
